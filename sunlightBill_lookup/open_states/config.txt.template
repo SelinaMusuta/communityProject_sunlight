@@ -1,0 +1,4 @@
+
+#A Django config file that contains all the sample secret keys
+
+api_key = 'f0000000000000000000t000000000000'
