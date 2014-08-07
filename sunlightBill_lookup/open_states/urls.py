@@ -4,8 +4,7 @@ from open_states import views
 
 urlpatterns = patterns('',
     url(r'^$', views.index, name='index'),
-    url(r'^(?P<bill_id>.*?)/(?P<state>.*?)/$', views.get_widget_list, name='widget_list_by_state_and_bill')
-     #url(r'^widget_list/$', views.get_widget_list, name='widget list')
+    url(r'^get_widget_list/(?P<bill_id>.+?)/(?P<state>\S+?)/$', views.get_widget_list, name='get_widget list'),
 )
 
-#widget_list/
+# Note that in the get_widget_list url, we need to give it a place to accept both the bill_id as a number and the state ID as a string

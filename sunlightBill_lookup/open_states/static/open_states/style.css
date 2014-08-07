@@ -1,0 +1,68 @@
+html, body	{ padding: 0; margin: 0; }
+
+body 				{background-color: #DEE7E2;
+					 background-size: 1855px 1855px;
+					 height: 100%;	
+					}
+
+#header				{position: absolute;
+					background-color: white;
+					width: 1300px;
+					height: 50px;
+					top: 0px;
+					left: 0px;
+					right: 0px;
+					text-align: left;
+	   				}
+
+.container		   {position: relative;
+					width: 1300px;
+					height: 100%;
+					overflow: hidden;
+					margin-top: 50px;
+    				}
+
+.lookup_container {
+					width: 1400px;
+					height: 1200px;
+					border: solid;
+					color: black;}
+
+
+#billLookup_container	{
+						width: 450px;
+				   		height: 300px;
+				   		margin-top: 5px;
+				   		margin-left: 10px;
+				   		border: solid;
+					}
+
+#widgetList_container	{
+						width: 450px;
+				   		height: 300px;
+				   		margin-top: 20px;
+				   		margin-left: 10px;
+				   		border: solid;
+					}
+
+#widgetPreview_container	{position: absolute;
+							width: 500px;
+				   			height: 500px;
+				   			margin-top: -590px;
+				   			margin-left: 500px;
+				   			border: solid;
+							}
+
+#footer				{position:absolute;
+					background-color: #413D3A;
+					width: 1300px;
+					height: 50px;
+					margin-top: 100px;
+					color: white;
+					text-align: center;
+					font-size: 15px;
+					padding-top: 5px;
+					border: solid;
+	   				}		
+
+

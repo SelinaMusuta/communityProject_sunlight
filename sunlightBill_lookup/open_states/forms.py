@@ -7,7 +7,7 @@ class SearchBillForm(forms.Form):
 	# how do I connect the api_call to the ChoiceField. api_call = forms.ChoiceField(label="open congress or open states", choices=SUNLIGHT_APIS)
 	bill_number = forms.CharField(label="bill number", max_length=10)
 	state = forms.CharField(label="state", max_length=5)
-	states = USStateField()
+	#states = USStateField()
 	#states_choices = forms.CharField(widget=USStateField())
 
 
