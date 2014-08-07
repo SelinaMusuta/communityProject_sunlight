@@ -43,6 +43,7 @@ body 				{background-color: #DEE7E2;
 				   		margin-top: 20px;
 				   		margin-left: 10px;
 				   		border: solid;
+				   		overflow: scroll;
 					}
 
 #widgetPreview_container	{position: absolute;
@@ -51,6 +52,7 @@ body 				{background-color: #DEE7E2;
 				   			margin-top: -590px;
 				   			margin-left: 500px;
 				   			border: solid;
+				   			overflow: scroll;
 							}
 
 #footer				{position:absolute;
@@ -64,5 +66,7 @@ body 				{background-color: #DEE7E2;
 					padding-top: 5px;
 					border: solid;
 	   				}		
+
+.single_bill_holder	{border: 2px dashed color:#686868; border-radius: 5px; background-color: white;}
 
 

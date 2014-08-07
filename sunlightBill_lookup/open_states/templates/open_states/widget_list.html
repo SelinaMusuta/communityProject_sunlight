@@ -2,30 +2,66 @@
 
 <head>
 
-<title>HTML Template</title>
+<title>Bill Lookup Widget Generator</title>
+
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'open_states/style.css' %}" />
 
 </head>
 
 <body>
 
-<h1>Widget List</h1>
+<div id="header"><h1>Bill Lookup Widget Generator</h1></div>
 
-{% for title in results %}
+	<div class="container">
+
+		<div class="lookup_container>">
+
+		<div id="billLookup_container">
+
+			<form action="" method="post">
+			{% csrf_token %}
+
+			<p><label for="bill_number">Bill #:</label>
+			{{form.bill_number}}</p>
+
+			{{form.state}}
+
+		<input type="submit" value="submit">
+		
+		</form>
+		</div>
+
+		<div id="widgetList_container">
+
+			<h1>Widget List</h1>
+			{% for bill in json_response %}
+				<div class="single_bill_holder">
+				<h3>{{bill.title}} <button>Remove</button></h3>
+				</div>
+			{% endfor %}
+			<br><br>
+			<button>Generate widget for this collection</button>
+
+		</div>
+
+		<div id="widgetPreview_container"><h2>Your Widget Preview</h2>
+{% for bill in json_response %}
 
 	<div class="one_result_holder">
-	<h3>{{title}} <button>Remove</button></h3>
+	<p><b>{{bill.state}} {{bill.bill_id}} ({{bill.session}}th session): </b>{{bill.title}}</p>
+	<br>Sponsors: blah blah blah lorem ipsum </br>
+		<br>Status: blah blah blah lorem ipsum </br>
 	</div>
 
 {% endfor %}
+		</div>
 
-<br><br>
-<button>Generate widget for this collection</button>
+		</div>
+	</div>
 
-
-</form>
-
-
-
+	<div id="footer"><h4> This website is open source. Visit the code: </h4></div>
 
 </body>
 
