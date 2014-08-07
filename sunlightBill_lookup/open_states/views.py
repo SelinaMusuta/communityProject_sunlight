@@ -25,7 +25,7 @@ def index(request):
 # This is a stand alone function that will pull the input field data/parameters: Api_key, bill_id, open_states_url.  
 def get_openstates_api(bill_id, state):
 	#Create a parameters variable from the openstates api rules including apikey, bill_id, and state
-	api_key = "f0000000000000000000t000000000000"
+	api_key = "c105eafac75e4f61b208de79bec4803f"
 	params = {'apikey': api_key, 'bill_id': bill_id, 'state': state} 
 	s = requests.get("http://openstates.org/api/v1/bills/", params=params)
 	json_response = s.json()
