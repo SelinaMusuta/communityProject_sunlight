@@ -19,21 +19,19 @@ def index(request):
          state = form.cleaned_data['state']
          #redirect to the widget view
          return HttpResponseRedirect('/widget_list/%s/%s/' % (bill_id, state))
-	return render(request, 'open_states/index.html', 
-		{
-			'form': form,
-    	})
+	return render(request, 'open_states/index.html', {'form': form})
 
 
 # This is a stand alone function that will pull the input field data/parameters: Api_key, bill_id, open_states_url.  
 def get_openstates_api(bill_id, state):
 	#Create a parameters variable from the openstates api rules including apikey, bill_id, and state
+	api_key = "f0000000000000000000t000000000000"
 	params = {'apikey': api_key, 'bill_id': bill_id, 'state': state} 
 	s = requests.get("http://openstates.org/api/v1/bills/", params=params)
 	json_response = s.json()
 	return json_response
 
-	#This function will pass the state and bill_id api
-def get_widget_list(request):
+#This function will pass the state and bill_id api
+def get_widget_list(request, bill_id, state):
 	json_response = get_openstates_api(bill_id, state)
 	return HttpResponse(json_response)
