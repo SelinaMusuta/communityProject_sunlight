@@ -3,7 +3,7 @@ from django.shortcuts import render
 import requests
 from forms import SearchBillForm, WidgetListForm
 from django.http import HttpResponseRedirect, HttpResponse
-import config 
+#import config 
 
 def index(request):
 	#Create a variable form for the SearchBillForm function in forms.py 
