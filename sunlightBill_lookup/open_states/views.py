@@ -18,7 +18,7 @@ def index(request):
          bill_id = form.cleaned_data['bill_number']
          state = form.cleaned_data['state']
          #redirect to the widget view
-         return HttpResponseRedirect('/widget_list/%s/%s/' % (bill_id, state))
+         return HttpResponseRedirect('/open_states/get_widget_list/%s/%s/' % (bill_id, state)) # Here we have to add the /open_states prefix to get Django to find the right urls.py files
 	return render(request, 'open_states/index.html', {'form': form})
 
 
