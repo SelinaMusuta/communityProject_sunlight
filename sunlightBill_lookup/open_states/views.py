@@ -32,6 +32,7 @@ def get_openstates_api(bill_id, state):
 	return json_response
 
 #This function will pass the state and bill_id api
+# We need request, bill_id, and state in the input section on the next line in order to pass variables to the API call
 def get_widget_list(request, bill_id, state):
 	json_response = get_openstates_api(bill_id, state)
 	return HttpResponse(json_response)
