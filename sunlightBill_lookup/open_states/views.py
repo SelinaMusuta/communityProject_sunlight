@@ -41,5 +41,9 @@ def get_widget_list(request, bill_id, state):
 		#json_response variable with get_openstates_api function
 		json_response = get_openstates_api(bill_id, state)
 		# Create a form variable that will receive the WidgetListForm get request
-		form = WidgetListForm(request.GET, {'json_response': json_response})
-		return render(request, 'open_states/widget_list.html',{'form': form})
+
+		results = []
+		for bill in json_response:
+			results.append(bill['title'])
+
+		return render(request, 'open_states/widget_list.html',{'results': results})

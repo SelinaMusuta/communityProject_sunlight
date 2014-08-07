@@ -10,13 +10,17 @@
 
 <h1>Widget List</h1>
 
-<form action="" method="get">
-{% csrf_token %}
+{% for title in results %}
 
+	<div class="one_result_holder">
+	<h3>{{title}} <button>Remove</button></h3>
+	</div>
 
-{{form.bill_number}}
+{% endfor %}
 
-<!-- {{json_response}} -->
+<br><br>
+<button>Generate widget for this collection</button>
+
 
 </form>
 
