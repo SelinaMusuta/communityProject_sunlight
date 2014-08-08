@@ -1,14 +1,36 @@
-html, body	{ padding: 0; margin: 0; }
+html, body			{ padding: 0; margin: 0; }
 
 body 				{background-color: #DEE7E2;
 					 background-size: 1855px 1855px;
 					 height: 100%;	
 					}
 
+input[type=text]		{
+						background-color: #FFF;
+    					border:solid 1px #BFBDBD;
+    					color: #979797;
+    					height: 40px;
+    					margin-top: 25px;
+    					margin-left: 60px;
+    					padding-left:10px;
+    					width: 191px;
+    					}
+    					/*box-shadow: 2px 2px 0 #828181 inset;}*/
+
+input[type=submit]		{height: 30px;
+						 width:  200px;
+						 margin-top: 10px;
+						 margin-left: 100px;
+						 border-radius: 5px;
+
+						}
+
 #header				{position: absolute;
-					background-color: white;
-					width: 1300px;
-					height: 50px;
+					background-color: #4d727b;
+					width: 1855px;
+					height: 75px;
+					border: solid 2px #ECEAE3;
+					border-left: none;
 					top: 0px;
 					left: 0px;
 					right: 0px;
@@ -22,42 +44,50 @@ body 				{background-color: #DEE7E2;
 					margin-top: 50px;
     				}
 
-.lookup_container {
-					width: 1400px;
-					height: 1200px;
-					border: solid;
+.lookup_container { display:inline-block;
+					width: 600px;
+					height: 700px;
+					margin-top: 30px;
+					margin-left: 30px;
+					border: solid 2px black;
 					color: black;}
 
 
-#billLookup_container	{
-						width: 450px;
-				   		height: 300px;
-				   		margin-top: 5px;
-				   		margin-left: 10px;
-				   		border: solid;
-					}
 
-#widgetList_container	{
+#billLookup_container	{background-color: #F7F7F1;
 						width: 450px;
 				   		height: 300px;
-				   		margin-top: 20px;
-				   		margin-left: 10px;
-				   		border: solid;
+				   		margin-top: 50px;
+				   		margin-left: 40px;
+				   		border: solid 2px black;
+						}
+
+
+
+#widgetList_container	{background-color: #F7F7F1;
+						width: 450px;
+				   		height: 300px;
+				   		margin-top: 40px;
+				   		margin-left: 40px;
+				   		border: solid 2px black;
 				   		overflow: scroll;
 					}
 
 #widgetPreview_container	{position: absolute;
+							background-color: #F7F7F1;
+							position: absolute;
 							width: 500px;
-				   			height: 500px;
-				   			margin-top: -590px;
-				   			margin-left: 500px;
-				   			border: solid;
+				   			height: 800px;
+				   			margin-top: 0px;
+				   			margin-left: 700px;
+				   			border: solid 2px #ECEAE3;
 				   			overflow: scroll;
 							}
 
+
 #footer				{position:absolute;
 					background-color: #413D3A;
-					width: 1300px;
+					width: 1855px;
 					height: 50px;
 					margin-top: 100px;
 					color: white;
@@ -67,6 +97,8 @@ body 				{background-color: #DEE7E2;
 					border: solid;
 	   				}		
 
-.single_bill_holder	{border: 2px dashed color:#686868; border-radius: 5px; background-color: white;}
+.single_bill_holder	{border: solid 2px black;
+					 color:#686868; 
+					 border-radius: 5px; background-color: white;}
 
 

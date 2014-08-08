@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 
 <head>
 
@@ -16,7 +16,7 @@
 
 	<div class="container">
 
-		<div class="lookup_container>">
+		<div class="lookup_container">
 
 		<div id="billLookup_container">
 
@@ -26,7 +26,8 @@
 			<p><label for="bill_number">Bill #:</label>
 			{{form.bill_number}}</p>
 
-			{{form.state}}
+			<p><label for="state">State:</label>
+			{{form.state}}</p>
 
 		<input type="submit" value="submit">
 		
@@ -34,11 +35,12 @@
 		</div>
 
 		<div id="widgetList_container">Hello</div>
+		</div>
 
-		<div id="widgetPreview_container"><h2>Preview</h2>
-			
-		</div>
-		</div>
+		<div class="lookup_container">
+		<div id="widgetPreview_container"><h2>Preview</h2></div>
+	</div>
+		
 	</div>
 
 	<div id="footer"><h4> This website is open source. Visit the code: </h4></div>
