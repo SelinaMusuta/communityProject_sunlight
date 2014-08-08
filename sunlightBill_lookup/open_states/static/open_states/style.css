@@ -25,6 +25,14 @@ input[type=submit]		{height: 30px;
 
 						}
 
+
+input[type=button]		{height: 30px;
+						 width:  200px;
+						 margin-top: 10px;
+						 margin-left: 100px;
+						 border-radius: 5px;
+						  }
+
 #header				{position: absolute;
 					background-color: #4d727b;
 					width: 1855px;
@@ -49,7 +57,7 @@ input[type=submit]		{height: 30px;
 					height: 700px;
 					margin-top: 30px;
 					margin-left: 30px;
-					border: solid 2px black;
+					border: solid 1px black;
 					color: black;}
 
 
@@ -70,17 +78,19 @@ input[type=submit]		{height: 30px;
 				   		margin-top: 40px;
 				   		margin-left: 40px;
 				   		border: solid 2px black;
-				   		overflow: scroll;
+				   		overflow-y: scroll;
+						overflow-x: hidden;
 					}
 
-#widgetPreview_container	{position: absolute;
+#widgetPreview_container	{display: inline-block;
 							background-color: #F7F7F1;
 							position: absolute;
 							width: 500px;
 				   			height: 800px;
-				   			margin-top: 0px;
-				   			margin-left: 700px;
-				   			border: solid 2px #ECEAE3;
+							margin-top: 30px;
+							margin-left: 30px;
+							border: solid 1px black;
+							color: black;
 				   			overflow: scroll;
 							}
 
@@ -97,8 +107,7 @@ input[type=submit]		{height: 30px;
 					border: solid;
 	   				}		
 
-.single_bill_holder	{border: solid 2px black;
-					 color:#686868; 
-					 border-radius: 5px; background-color: white;}
+.single_bill_holder	{
+					 color:#686868; }
 
 
