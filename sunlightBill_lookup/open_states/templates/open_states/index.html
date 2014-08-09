@@ -13,43 +13,66 @@
 
 <body>
 
-<div id="header"><h1>Bill Lookup Widget Generator</h1></div>
+	<div id="header"><h1>Bill Lookup Widget Generator</h1></div>
 
-	<div class="container">
+		<div class="container">
+
+			<div class="lookup_container">
+
+				<div id="billLookup_container">
+
+				<form action="" method="post">
+				{% csrf_token %}
+
+				<p>
+				{{form.sunlightAPIs}}</p>
+
+				<p><label for="bill_number">Bill #:</label>
+				{{form.bill_number}}</p>
+
+				<p><label for="state">State:</label>
+				{{form.state}}</p>
+				
+			<input type="submit" value="submit">
+		
+				</form>
+				<!-- billlookup container close out -->
+				</div>
+
+			<div id="widgetList_container">
+
+			<h3>Widget List</h3>
+			{% for bill in json_response %}
+				<div class="single_bill_holder">
+				<h3>{{bill.title}} <button>Remove</button></h3>
+				</div>
+			{% endfor %}
+			<br><br>
+			<button>Generate widget for this collection</button>
+		<!-- widgetlist container -->
+			</div>
+		</div>
 
 		<div class="lookup_container">
-
-		<div id="billLookup_container">
-
-			<form action="" method="post">
-			{% csrf_token %}
-
-			<p>
-			{{form.sunlightAPIs}}</p>
-
-			<p><label for="bill_number">Bill #:</label>
-			{{form.bill_number}}</p>
-
-			<p><label for="state">State:</label>
-			{{form.state}}</p>
-
-		<input type="submit" value="submit">
+			<div id="widgetPreview_container"><h2>Preview</h2>
 		
-		</form>
-		</div>
+			{% for bill in json_response %}
 
-		<div id="widgetList_container">Hello</div>
-		</div>
+				<div class="one_result_holder">
+				<p><b>{{bill.state}} {{bill.bill_id}} ({{bill.session}}th session): </b>{{bill.title}}</p>
+				<br>Sponsors: blah blah blah lorem ipsum </br>
+				<br>Status: blah blah blah lorem ipsum </br>
 
-		
-		<div id="widgetPreview_container"><h2>Preview</h2>
-	</div>
-		
-	</div>
-
+			{% endfor %}
+			<!-- widget preview container close out  -->
+				</div>
+			</div>
+	<!-- container close out div -->
+	
 	<div id="footer"><h4> This website is open source. Visit the code: </h4></div>
 
-<script type="text/javascript" "{% static 'js/script.js' %}"></script>
+	</div>
+
 </body>
 
 </html>
