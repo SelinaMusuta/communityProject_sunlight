@@ -19,7 +19,7 @@ input[type=text]		{
 
 input[type=submit]		{height: 30px;
 						 width:  200px;
-						 margin-top: 10px;
+						 margin-top: 5px;
 						 margin-left: 100px;
 						 border-radius: 5px;
 
@@ -28,10 +28,21 @@ input[type=submit]		{height: 30px;
 
 input[type=button]		{height: 30px;
 						 width:  200px;
-						 margin-top: 10px;
+						 margin-top: 5px;
 						 margin-left: 100px;
 						 border-radius: 5px;
 						  }
+
+select 					{
+  						position: relative;
+						}
+
+#id_sunlightAPIs 	{height: 40px;
+					width:  200px;
+					margin-top: 10px;
+					margin-left: 100px;
+					border-radius: 5px;
+					background-color: white;}
 
 #header				{position: absolute;
 					background-color: #4d727b;
@@ -55,9 +66,8 @@ input[type=button]		{height: 30px;
 .lookup_container { display:inline-block;
 					width: 600px;
 					height: 700px;
-					margin-top: 30px;
+					margin-top: 10px;
 					margin-left: 30px;
-					border: solid 1px black;
 					color: black;}
 
 
@@ -86,12 +96,12 @@ input[type=button]		{height: 30px;
 							background-color: #F7F7F1;
 							position: absolute;
 							width: 500px;
-				   			height: 800px;
-							margin-top: 30px;
+				   			height: 600px;
+							margin-top: 50px;
 							margin-left: 30px;
 							border: solid 1px black;
-							color: black;
-				   			overflow: scroll;
+							overflow-y: scroll;
+							overflow-x: hidden;
 							}
 
 
@@ -107,7 +117,10 @@ input[type=button]		{height: 30px;
 					border: solid;
 	   				}		
 
-.single_bill_holder	{
+.single_bill_holder	{margin-left: 10px;
+					 color:#686868; }
+
+.one_result_holder  {margin-left: 10px;
 					 color:#686868; }
 
 

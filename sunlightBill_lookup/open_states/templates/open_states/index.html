@@ -27,7 +27,7 @@
 				<p>
 				{{form.sunlightAPIs}}</p>
 
-				<p><label for="bill_number">Bill #:</label>
+				<p><label for="bill_number">Bill#:</label>
 				{{form.bill_number}}</p>
 
 				<p><label for="state">State:</label>
@@ -59,7 +59,8 @@
 			{% for bill in json_response %}
 
 				<div class="one_result_holder">
-				<p><b>{{bill.state}} {{bill.bill_id}} ({{bill.session}}th session): </b>{{bill.title}}</p>
+				<p><b>{{bill.state}} {{bill.bill_id}} ({{bill.session}}th session): 
+				</b>{{bill.title}}</p>
 				<br>Sponsors: blah blah blah lorem ipsum </br>
 				<br>Status: blah blah blah lorem ipsum </br>
 

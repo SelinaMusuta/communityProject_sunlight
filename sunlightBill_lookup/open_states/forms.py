@@ -15,7 +15,7 @@ def get_my_sunlightAPIs():
 class SearchBillForm(forms.Form):
 	sunlightAPIs = forms.ChoiceField(choices=((1, 'Congress'),(2, 'States')))
 	bill_number = forms.CharField(label="bill number", max_length=10)
-	state = forms.CharField(label="state", max_length=5)
+	state = forms.CharField(label="state", max_length=5, required= False)
 	#states = USStateField()
 	#states_choices = forms.CharField(widget=USStateField())
 
