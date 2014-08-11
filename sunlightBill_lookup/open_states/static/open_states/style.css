@@ -1,6 +1,11 @@
+@import 	url('http://fonts.googleapis.com/css?family=Helvetica');
+@import 	url('http://fonts.googleapis.com/css?family=Georgia');
+@import 	url('http://fonts.googleapis.com/css?family=Ubuntu Condensed');
+
+
 html, body			{ padding: 0; margin: 0; }
 
-body 				{background-color: #DEE7E2;
+body 				{background-color: #F9F8F8;
 					 height: 100%;	
 					}
 
@@ -13,11 +18,14 @@ input[type=text]		{
 						background-color: #FFF;
     					border:solid 1px #BFBDBD;
     					color: #979797;
+    					font-family: "Helvetica", regular;
     					height: 40px;
     					margin-top: 10px;
-    					margin-left: 60px;
+    					margin-left: 100px;
     					padding-left:10px;
     					width: 191px;
+    					font-family: "Georgia", regular;
+						font-size: 16pt;
     					}
     					/*box-shadow: 2px 2px 0 #828181 inset;}*/
 
@@ -26,6 +34,8 @@ input[type=submit]		{height: 30px;
 						 margin-top: 5px;
 						 margin-left: 100px;
 						 border-radius: 5px;
+						 font-family: "Georgia", regular;
+						 font-size: 16pt;
 
 						}
 
@@ -38,11 +48,13 @@ input[type=button]		{height: 30px;
 						 background:url(/open_states/images/icon-no.gif);
 						  }
 
-#generate 					  {
+#generate 					  {background-color: white;
 							   height: 30px;
 							   width: 300px;
 							   margin-left: 50px;
-							   margin-top: 100px;
+							   margin-top: 25px;
+							   font-family: "Georgia", regular;
+						 	   font-size: 16pt;
 
 							   
 								}
@@ -52,6 +64,7 @@ button 					{height: 30px;
 						 margin-top: 5px;
 						 margin-left: 75px;
 						 border-radius: 5px;
+						 background-image:url('static/open_states/images/icon-no.gif');
 						 
 						  }
 
@@ -69,10 +82,13 @@ button 					{height: 30px;
 					height: 75px;
 					border: solid 2px #ECEAE3;
 					border-left: none;
+					padding: 0px;
 					top: 0px;
 					left: 0px;
 					right: 0px;
 					text-align: left;
+					font-family: "Ubuntu Condensed", regular;
+					font-size: 14pt;
 	   				}
 
 .container		   {position: relative;
@@ -87,49 +103,57 @@ button 					{height: 30px;
 					height: 700px;
 					margin-top: 10px;
 					margin-left: 30px;
+					padding: 0px;
 					color: black;}
 
 
 
-#billLookup_container	{background-color: #F7F7F1;
+#billLookup_container	{background-color: #EEEEEE;
 						width: 450px;
 				   		height: 300px;
-				   		margin-top: 50px;
+				   		margin-top: 10px;
 				   		margin-left: 75px;
 				   		/*border: solid 2px black;*/
 						}
 
 
 
-#widgetList_container	{background-color: #F7F7F1;
+#widgetList_container	{background-color: #EEEEEE;
 						width: 450px;
 				   		height: 300px;
-				   		margin-top: 40px;
+				   		margin-top: 30px;
 				   		margin-left: 75px;
+				   		font-family: "Ubuntu Condensed", regular;
+						font-size: 14pt;
 				   		/*border: solid 2px black;*/
 				   		overflow-y: scroll;
 						overflow-x: hidden;
 					}
 
 #widgetPreview_container	{display: inline-block;
-							background-color: #F7F7F1;
+							background-color: #EEEEEE;
 							position: absolute;
 							width: 500px;
-				   			height: 700px;
+				   			height: 600px;
 							margin-top: 50px;
 							margin-left: 30px;
+							font-family: "Ubuntu Condensed", regular;
+							font-size: 11pt;
 							border: solid 1px black;
+							
 							
 							}
 
 #widgetPreview				{display: inline-block;
-							background-color: #F7F7F1;
+							background-color: #F9F8F8;
 							position: absolute;
 							width: 400px;
 				   			height: 350px;
 							margin-top: 50px;
 							margin-left: 40px;
 							border: solid 1px black;
+							font-family: "Georgia", regular;
+							font-size: 12pt;
 							overflow-y: scroll;
 							overflow-x: hidden;
 							}
@@ -146,7 +170,19 @@ button 					{height: 30px;
 
 
 
-#footer				{position: absolute;
+
+
+.single_bill_holder	{font-family: "Georgia", regular;
+					font-size: 6pt;
+					 margin-left: 10px;
+					 color:#686868; }
+
+.one_result_holder  {display: inline;
+					 margin-left: 10px;
+					 color:#686868; }
+
+
+#footer				{
 					background-color: #413D3A;
 					width: 1855px;
 					height: 50px;
@@ -158,13 +194,5 @@ button 					{height: 30px;
 					border: solid;
 					border-left: none;
 	   				}		
-
-.single_bill_holder	{
-					 margin-left: 10px;
-					 color:#686868; }
-
-.one_result_holder  {display: inline;
-					 margin-left: 10px;
-					 color:#686868; }
 
 

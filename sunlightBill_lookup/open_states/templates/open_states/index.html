@@ -7,7 +7,7 @@
 {% load staticfiles %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'open_states/style.css' %}" />
-<script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'open_states/jquery-1.11.1.min.js' %}"></script>
 
 </head>
 
@@ -27,10 +27,10 @@
 				<p>
 				{{form.sunlightAPIs}}</p>
 
-				<p><label for="bill_number">Bill#:</label>
+				<p>
 				{{form.bill_number}}</p>
 
-				<p><label for="state">State:</label>
+				<p>
 				{{form.state}}</p>
 				
 			<input type="submit" value="submit">
@@ -76,6 +76,8 @@
 	</div>
 
 	<div id="footer"><h4> This website is open source. Visit the code: </h4></div>
+
+	<script type="text/javascript" src="{% static javascript.js %}"></script>
 
 </body>
 

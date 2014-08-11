@@ -16,7 +16,10 @@ def index(request):
         if form.is_valid(): 
         	sunlightAPIs = form.cleaned_data['sunlightAPIs']
         	bill_id = form.cleaned_data['bill_number']
-         	state = form.cleaned_data['state'] 
+         	state = form.cleaned_data['state']
+         	if state=="":
+         		state="none"
+
          	# Process the data in form.cleaned_data by creating a bill_id and state variable
          	#redirect to the widget view
          	return HttpResponseRedirect('/open_states/get_widget_list/%s/%s/%s/' % (sunlightAPIs, bill_id, state)) # Here we have to add the /open_states prefix to get Django to find the right urls.py files
@@ -38,7 +41,7 @@ def get_opencongress_api(bill_id):
 	#Create a parameters variable from the Congress API api rules including apikey, bill_id, and state
 	api_key = "c105eafac75e4f61b208de79bec4803f"
 	params = {'apikey': api_key, 'bill_id': bill_id} 
-	s = requests.get("https://congress.api.sunlightfoundation.com/bills?history.active=true&order=last_action_at/", params=params)
+	s = requests.get("https://congress.api.sunlightfoundation.com/bills/search/", params=params)
 	json_response = s.json()
 	return json_response
 
@@ -51,18 +54,15 @@ def get_widget_list(request, sunlightAPIs, bill_id, state):
         if form.is_valid(): 
         	sunlightAPIs = form.cleaned_data['sunlightAPIs']
         	bill_id = form.cleaned_data['bill_number']
-         	state = form.cleaned_data['state'] 
-         	# Process the data in form.cleaned_data by creating a bill_id and state variable
-         	#redirect to the widget view
+         	state = form.cleaned_data['state']
+         	if state=="":
+  				state="none"
          	return HttpResponseRedirect('/open_states/get_widget_list/%s/%s/%s/' % (sunlightAPIs, bill_id, state)) # Here we have to add the /open_states prefix to get Django to find the right urls.py files 
 	if request.method == 'GET':
-		#json_response variable with get_openstates_api function
 		if sunlightAPIs == "1":
 			json_response = get_opencongress_api(bill_id)
 			
 		else: 
 			json_response = get_openstates_api(bill_id, state)
-			
-		# Create a form variable that will receive the WidgetListForm get request
 
 		return render(request, 'open_states/widget_list.html',{'json_response': json_response, 'form':form})

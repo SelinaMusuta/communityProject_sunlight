@@ -7,7 +7,7 @@
 {% load staticfiles %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'open_states/style.css' %}" />
-<script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 </head>
 
@@ -27,10 +27,10 @@
 				<p>
 				{{form.sunlightAPIs}}</p>
 
-				<p><label for="bill_number">Bill#:</label>
+				<p>
 				{{form.bill_number}}</p>
 
-				<p><label for="state">State:</label>
+				<p>
 				{{form.state}}</p>
 				
 			<input type="submit" value="submit">
@@ -48,29 +48,25 @@
 				</div>
 			{% endfor %}
 			<br><br>
-			<button>Generate widget for this collection</button>
+			<input type="button" name="btn" id="generate" value="Generate" />
 		<!-- widgetlist container -->
 			</div>
 		</div>
 
 		<div class="lookup_container">
 			<div id="widgetPreview_container"><h2>Preview</h2>
-			<div id="widgetPreview">
-			{% for bill in json_response %}
+				<div id="widgetPreview">
+				{% for bill in json_response %}
 
 				<div class="one_result_holder">
 				<p><b>{{bill.state}} {{bill.bill_id}} ({{bill.session}}th session): 
 				</b>{{bill.title}}</p>
 				<br>Sponsors: blah blah blah lorem ipsum </br>
 				<br>Status: blah blah blah lorem ipsum </br>
-
-			{% endfor %}
+				{% endfor %}
 			</div>
-				<div id="iframe_container">widget preview container close out</div>
-			</div>
-
-
-			</div>
+		</div>
+				<div id="iframe_container">iframe</div>
 	<!-- container close out div -->
 
 	</div>

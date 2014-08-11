@@ -4,4 +4,11 @@
 
 {{json_response}}
 
+<h3>Widget List</h3>
+			{% for bill in json_response %}
+				<div class="single_bill_holder">
+				<h3>{{bill.bill_id}} <button>Remove</button></h3>
+				</div>
+			{% endfor %}
+
 </body>
