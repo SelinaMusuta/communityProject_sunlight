@@ -1,16 +1,20 @@
 html, body			{ padding: 0; margin: 0; }
 
 body 				{background-color: #DEE7E2;
-					 background-size: 1855px 1855px;
 					 height: 100%;	
 					}
+
+h3						{
+    					margin-left: 45px;
+    					font-size: 20pt;
+						}
 
 input[type=text]		{
 						background-color: #FFF;
     					border:solid 1px #BFBDBD;
     					color: #979797;
     					height: 40px;
-    					margin-top: 25px;
+    					margin-top: 10px;
     					margin-left: 60px;
     					padding-left:10px;
     					width: 191px;
@@ -27,15 +31,30 @@ input[type=submit]		{height: 30px;
 
 
 input[type=button]		{height: 30px;
-						 width:  200px;
-						 margin-top: 5px;
+						 width:  100px;
+						 margin-top: 30px;
 						 margin-left: 100px;
 						 border-radius: 5px;
+						 background:url(/open_states/images/icon-no.gif);
 						  }
 
-select 					{
-  						position: relative;
-						}
+#generate 					  {
+							   height: 30px;
+							   width: 300px;
+							   margin-left: 50px;
+							   margin-top: 100px;
+
+							   
+								}
+
+button 					{height: 30px;
+						 width:  50px;
+						 margin-top: 5px;
+						 margin-left: 75px;
+						 border-radius: 5px;
+						 
+						  }
+
 
 #id_sunlightAPIs 	{height: 40px;
 					width:  200px;
@@ -76,8 +95,8 @@ select 					{
 						width: 450px;
 				   		height: 300px;
 				   		margin-top: 50px;
-				   		margin-left: 40px;
-				   		border: solid 2px black;
+				   		margin-left: 75px;
+				   		/*border: solid 2px black;*/
 						}
 
 
@@ -86,8 +105,8 @@ select 					{
 						width: 450px;
 				   		height: 300px;
 				   		margin-top: 40px;
-				   		margin-left: 40px;
-				   		border: solid 2px black;
+				   		margin-left: 75px;
+				   		/*border: solid 2px black;*/
 				   		overflow-y: scroll;
 						overflow-x: hidden;
 					}
@@ -96,31 +115,56 @@ select 					{
 							background-color: #F7F7F1;
 							position: absolute;
 							width: 500px;
-				   			height: 600px;
+				   			height: 700px;
 							margin-top: 50px;
 							margin-left: 30px;
+							border: solid 1px black;
+							
+							}
+
+#widgetPreview				{display: inline-block;
+							background-color: #F7F7F1;
+							position: absolute;
+							width: 400px;
+				   			height: 350px;
+							margin-top: 50px;
+							margin-left: 40px;
 							border: solid 1px black;
 							overflow-y: scroll;
 							overflow-x: hidden;
 							}
 
+#iframe_container			{height: 30px;
+						 	 width:  400px;
+						 	 margin-left: 50px;
+						 	 margin-top: 500px;
+						 	 border: solid 2px;
+						 	 border-radius: 5px;
+						 	 background-color: white;
+}
 
-#footer				{position:absolute;
+
+
+
+#footer				{position: absolute;
 					background-color: #413D3A;
 					width: 1855px;
 					height: 50px;
-					margin-top: 100px;
+					margin-top: 10px;
 					color: white;
 					text-align: center;
 					font-size: 15px;
 					padding-top: 5px;
 					border: solid;
+					border-left: none;
 	   				}		
 
-.single_bill_holder	{margin-left: 10px;
+.single_bill_holder	{
+					 margin-left: 10px;
 					 color:#686868; }
 
-.one_result_holder  {margin-left: 10px;
+.one_result_holder  {display: inline;
+					 margin-left: 10px;
 					 color:#686868; }
 
 

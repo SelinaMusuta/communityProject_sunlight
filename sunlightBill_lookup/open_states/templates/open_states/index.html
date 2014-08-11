@@ -48,14 +48,14 @@
 				</div>
 			{% endfor %}
 			<br><br>
-			<button>Generate widget for this collection</button>
+			<input type="button" name="btn" id="generate" value="Generate" />
 		<!-- widgetlist container -->
 			</div>
 		</div>
 
 		<div class="lookup_container">
 			<div id="widgetPreview_container"><h2>Preview</h2>
-		
+			<div id="widgetPreview">
 			{% for bill in json_response %}
 
 				<div class="one_result_holder">
@@ -65,14 +65,17 @@
 				<br>Status: blah blah blah lorem ipsum </br>
 
 			{% endfor %}
-			<!-- widget preview container close out  -->
-				</div>
+			</div>
+				<div id="iframe_container">iframe</div>
+			</div>
+
+
 			</div>
 	<!-- container close out div -->
-	
-	<div id="footer"><h4> This website is open source. Visit the code: </h4></div>
 
 	</div>
+
+	<div id="footer"><h4> This website is open source. Visit the code: </h4></div>
 
 </body>
 
