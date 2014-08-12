@@ -42,9 +42,9 @@
 			<div id="widgetList_container">
 
 			<h3>Widget List</h3>
-			{% for bill in json_response %}
+			{% for bill in bills %}
 				<div class="single_bill_holder">
-				<h3>{{bill.title}} <button>Remove</button></h3>
+				<h3>{{bill.short_title}} <button>Remove</button></h3>
 				</div>
 			{% endfor %}
 			<br><br>
@@ -56,17 +56,18 @@
 		<div class="lookup_container">
 			<div id="widgetPreview_container"><h2>Preview</h2>
 				<div id="widgetPreview">
-				{% for bill in json_response %}
-
+				{% for bill in bills %}
 				<div class="one_result_holder">
-				<p><b>{{bill.state}} {{bill.bill_id}} ({{bill.session}}th session): 
-				</b>{{bill.title}}</p>
-				<br>Sponsors: blah blah blah lorem ipsum </br>
-				<br>Status: blah blah blah lorem ipsum </br>
+				<p><b>{{bill.bill_id}} ({{bill.congress}}th congress):
+				</b>{{bill.short_title}}</p>
+				<br><b>Sponsor</b>: {{bill.title}}{{bill.sponsor.first_name}} {{bill.sponsor.last_name}} </br>
+				<br><b>Full title</b>: {{bill.official_title}}
+				</div> </br>
 				{% endfor %}
+
 			</div>
 		</div>
-				<div id="iframe_container">iframe</div>
+		<div id="iframe_container">iframe</div>
 	<!-- container close out div -->
 
 	</div>
