@@ -24,16 +24,11 @@
 				<form action="" method="post">
 				{% csrf_token %}
 
-				<p>
-				{{form.sunlightAPIs}}</p>
-
-				<p>
-				{{form.bill_number}}</p>
-
-				<p>
-				{{form.state}}</p>
+				<p>{{form.sunlightAPIs}}</p>
+				<p>{{form.bill_number}}</p>
+				<p>{{form.state}}</p>
 				
-			<input type="submit" value="Add more bills">
+				<input type="submit" value="Add more bills">
 		
 				</form>
 				<!-- billlookup container close out -->
@@ -41,27 +36,28 @@
 
 			<div id="widgetList_container">
 
-			<h3>Widget List</h3>
+				<h3>Widget List</h3>
 		
-
-			{% for bill in congress_bills %}
+				{% for bill in congress_bills %}
 				<div class="single_bill_holder">
 				<h3>{{bill.short_title}} <button>Remove</button></h3>
 				</div>
-			{% endfor %}
+				{% endfor %}
 
-			{% for bill in state_bills %}
+				{% for bill in state_bills %}
+				<script>
 				<div class="single_bill_holder">
-				<h3>{{bill.title}} <button>Remove</button></h3>
+				<h3>{{bill.title}} 
+				<button>Remove</button></h3>
 				</div>
-			{% endfor %}
+				</script>
+				{% endfor %}
 
-
-			<br><br>
-			<input type="button" name="btn" id="generate" value="Generate" />
+				<br><br>
+				<input type="button" name="btn" id="generate" value="Generate" />
 		<!-- widgetlist container -->
 			</div>
-		</div>
+			</div>
 
 		<div class="lookup_container">
 			<div id="widgetPreview_container"><h2>Preview</h2>
@@ -83,13 +79,18 @@
 				{% endfor %}
 
 			</div>
+			<div id="iframe_container">iframe</div>
 		</div>
-		<div id="iframe_container">iframe</div>
+		
 	<!-- container close out div -->
 
 	</div>
 
+</div>
+
 	<div id="footer"><h4> This website is open source. Visit the code: </h4></div>
+
+<script type="text/javascript" src="{% static 'script.js' %}"></script>
 
 </body>
 

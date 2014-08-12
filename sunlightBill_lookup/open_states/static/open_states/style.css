@@ -92,17 +92,18 @@ button 					{height: 30px;
 	   				}
 
 .container		   {position: relative;
-					width: 1300px;
+					width: 1500px;
 					height: 100%;
 					overflow: hidden;
 					margin-top: 50px;
+					/*border: solid 2px black;*/
     				}
 
 .lookup_container { display:inline-block;
-					width: 600px;
+					width: 500px;
 					height: 700px;
 					margin-top: 10px;
-					margin-left: 30px;
+					margin-left: 100px;
 					padding: 0px;
 					color: black;}
 
@@ -110,9 +111,9 @@ button 					{height: 30px;
 
 #billLookup_container	{background-color: #EEEEEE;
 						width: 450px;
-				   		height: 300px;
-				   		margin-top: 10px;
-				   		margin-left: 75px;
+				   		height: 320px;
+				   		margin-top: 5px;
+				   		margin-left: 100px;
 				   		/*border: solid 2px black;*/
 						}
 
@@ -120,9 +121,9 @@ button 					{height: 30px;
 
 #widgetList_container	{background-color: #EEEEEE;
 						width: 450px;
-				   		height: 300px;
+				   		height: 335px;
 				   		margin-top: 30px;
-				   		margin-left: 75px;
+				   		margin-left: 100px;
 				   		font-family: "Ubuntu Condensed", regular;
 						font-size: 14pt;
 				   		/*border: solid 2px black;*/
@@ -136,7 +137,7 @@ button 					{height: 30px;
 							width: 500px;
 				   			height: 600px;
 							margin-top: 50px;
-							margin-left: 30px;
+							margin-left: 10px;
 							font-family: "Ubuntu Condensed", regular;
 							font-size: 11pt;
 							border: solid 1px black;
@@ -150,7 +151,7 @@ button 					{height: 30px;
 							width: 400px;
 				   			height: 350px;
 							margin-top: 50px;
-							margin-left: 40px;
+							margin-left: 60px;
 							border: solid 1px black;
 							font-family: "Georgia", regular;
 							font-size: 12pt;
@@ -182,11 +183,11 @@ button 					{height: 30px;
 					 color:#686868; }
 
 
-#footer				{
+#footer			{
 					background-color: #413D3A;
 					width: 1855px;
-					height: 50px;
-					margin-top: 10px;
+					height: 95px;
+					margin-top: 5px;
 					color: white;
 					text-align: center;
 					font-size: 15px;
