@@ -5,7 +5,7 @@
 
 html, body			{ padding: 0; margin: 0; }
 
-body 				{background-color: #F9F8F8;
+body 				{background-color: #DEE7E2;
 					 height: 100%;	
 					}
 
@@ -13,6 +13,12 @@ h3						{
     					margin-left: 45px;
     					font-size: 20pt;
 						}
+
+
+
+.widget_title		{
+					margin-left: 20px;
+					font-size: 50pt;}
 
 input[type=text]		{
 						background-color: #FFF;
@@ -52,7 +58,7 @@ input[type=button]		{height: 30px;
 							   height: 30px;
 							   width: 300px;
 							   margin-left: 50px;
-							   margin-top: 25px;
+							   margin-top: 110px;
 							   font-family: "Georgia", regular;
 						 	   font-size: 16pt;
 
@@ -77,10 +83,9 @@ button 					{height: 30px;
 					background-color: white;}
 
 #header				{position: absolute;
-					background-color: #4d727b;
+					background-color: #413D3A;
 					width: 1855px;
 					height: 75px;
-					border: solid 2px #ECEAE3;
 					border-left: none;
 					padding: 0px;
 					top: 0px;
@@ -89,6 +94,7 @@ button 					{height: 30px;
 					text-align: left;
 					font-family: "Ubuntu Condensed", regular;
 					font-size: 14pt;
+					color: white;
 	   				}
 
 .container		   {position: relative;
@@ -102,18 +108,19 @@ button 					{height: 30px;
 .lookup_container { display:inline-block;
 					width: 500px;
 					height: 700px;
-					margin-top: 10px;
-					margin-left: 100px;
-					padding: 0px;
+					margin-top: 30px;
+					margin-left: 150px;
+
 					color: black;}
 
 
 
 #billLookup_container	{background-color: #EEEEEE;
 						width: 450px;
-				   		height: 320px;
+				   		height: 300px;
 				   		margin-top: 5px;
 				   		margin-left: 100px;
+				   		border: solid 3px white;
 				   		/*border: solid 2px black;*/
 						}
 
@@ -126,7 +133,7 @@ button 					{height: 30px;
 				   		margin-left: 100px;
 				   		font-family: "Ubuntu Condensed", regular;
 						font-size: 14pt;
-				   		/*border: solid 2px black;*/
+				   		border: solid 3px white;
 				   		overflow-y: scroll;
 						overflow-x: hidden;
 					}
@@ -140,7 +147,7 @@ button 					{height: 30px;
 							margin-left: 10px;
 							font-family: "Ubuntu Condensed", regular;
 							font-size: 11pt;
-							border: solid 1px black;
+							border: solid 3px white;
 							
 							
 							}
@@ -166,28 +173,31 @@ button 					{height: 30px;
 						 	 border: solid 2px;
 						 	 border-radius: 5px;
 						 	 background-color: white;
-}
+								}
 
 
 
 
 
 
-.single_bill_holder	{font-family: "Georgia", regular;
-					font-size: 6pt;
+.single_bill_holder	{display: inline;
 					 margin-left: 10px;
-					 color:#686868; }
+					 color:#686868;
+					 font-size: x-small; }
 
 .one_result_holder  {display: inline;
-					 margin-left: 10px;
-					 color:#686868; }
+					font-family: "Helvetica", regular;
+					font-size: 12pt;
+					padding: 0px;
+					color:#686868;
+					 }
 
 
 #footer			{
 					background-color: #413D3A;
 					width: 1855px;
-					height: 95px;
-					margin-top: 5px;
+					height: 111px;
+					
 					color: white;
 					text-align: center;
 					font-size: 15px;

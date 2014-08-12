@@ -13,7 +13,7 @@
 
 <body>
 
-	<div id="header"><h1>Bill Lookup Widget Generator</h1></div>
+	<div id="header"><span class='widget_title'>Bill Lookup Widget Generator</span></div>
 
 		<div class="container">
 
@@ -41,7 +41,7 @@
 
 			<div id="widgetList_container">
 
-			<h3>Widget List</h3>
+			<h3>List of Desired Bills</h3>
 			{% for bill in json_response %}
 				<div class="single_bill_holder">
 				<h3>{{bill.title}} <button>Remove</button></h3>
@@ -75,7 +75,7 @@
 
 	</div>
 
-	<div id="footer"><h4> This website is open source. Visit the code: </h4></div>
+	<div id="footer"><h4> This website is open source. Visit the code: . Powered by the Sunlight Foundation</h4><img src= "{{STATIC_URL}} open_states/sunlight_logo.jpg"/></div>
 
 
 	<script type="text/javascript" src="{% static javascript.js %}"></script>

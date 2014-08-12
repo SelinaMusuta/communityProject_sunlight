@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <head>
+<meta charset="utf-8">
 
 <title>Bill Lookup Widget Generator</title>
 
@@ -43,17 +44,14 @@
 				<h3>{{bill.short_title}} <button>Remove</button></h3>
 				</div>
 				{% endfor %}
-
 				{% for bill in state_bills %}
-				<script>
 				<div class="single_bill_holder">
 				<h3>{{bill.title}} 
 				<button>Remove</button></h3>
 				</div>
-				</script>
 				{% endfor %}
 
-				<br><br>
+				<br>
 				<input type="button" name="btn" id="generate" value="Generate" />
 		<!-- widgetlist container -->
 			</div>
@@ -90,7 +88,16 @@
 
 	<div id="footer"><h4> This website is open source. Visit the code: </h4></div>
 
-<script type="text/javascript" src="{% static 'script.js' %}"></script>
+<script type="text/javascript" src="{% static 'open_states/script.js' %}"></script>
+
+	<script>
+	$('.one_result_holder').hide();
+
+	$('button').click(function(){
+		$(this).parent().hide();
+		$('.one_result_holder').show();
+	});
+	</script>
 
 </body>
 
