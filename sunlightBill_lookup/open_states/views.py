@@ -61,7 +61,19 @@ def get_widget_list(request, sunlightAPIs, bill_id, state):
 	if request.method == 'GET':
 		if sunlightAPIs == "1":
 			json_response = get_opencongress_api(bill_id)
-			bills = json_response['results']
+			congress_bills = json_response['results']
+			state_bills = []
+#			try:
+#				congress_bills = congress_bills.append(json_response['results'])
+#			except:
+#				congress_bills = []
 		else:
 			json_response = get_openstates_api(bill_id, state)
-		return render(request, 'open_states/widget_list.html',{'json_response': json_response, 'form':form, 'bills':bills})
+			state_bills = json_response
+			congress_bills = []
+#			try:
+#				state_bills = state_bills.append(json_response)
+#			except:
+#				state_bills = []
+			# Get the slice of bills for the state json object state_bills = json_response[????]
+		return render(request, 'open_states/widget_list.html',{'state_bills': state_bills, 'form':form, 'congress_bills':congress_bills})
