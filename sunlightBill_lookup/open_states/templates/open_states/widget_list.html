@@ -40,45 +40,77 @@
 				<h3>Widget List</h3>
 
 
+				{% for bill in congress_bills %}
 
-				{% for bill in state_bills %}
-				<div id={{bill.bill_id}}>
-					<div class="single_bill_holder">
+				<div class="single_bill_holder">
 					<h3></h3><button>Remove</button>
 				</div>
 				
 
-				// <script> $.ajax({
-				      url: "http://openstates.org/api/v1//bills/?state={{state}}&bill_id={{bill_id}}&apikey=c105eafac75e4f61b208de79bec4803f",
+				
+				<script> 
+				$( document ).ready(function() {
+				$.ajax({
+				      url: "https://congress.api.sunlightfoundation.com/bills/search?bill_id=hr5-113&apikey=c105eafac75e4f61b208de79bec4803f",
 				      dataType: 'jsonp',
 				      success: function(results){
-				          var bill_title = results[0].title;
-				          var bill_id = results[0].bill_id;
-				          $('.single_bill_holder h3').text(bill_title);
-				          $('#state_bills').append("<div id='three'></div>");
-				          $('#three').text(bill_title);
-
+				      	var bill_id = results.results[0].bill_id;
+				      	var bill_title = results.results[0].short_title;
+				      	var full_text = bill_id+": "+bill_title
+				          $('.single_bill_holder h3').text(full_text);
 				      }
 				  });
-				      $('button').click(function(){
-				          	$('h3').append("<button>Hi</button>");
 
-				      	});
+				$('button').click(function(){
+				 $(this).parent().hide();
+				  });
+
+				});
+
+
+				     
 				</script>
-				{% endfor %}
+				{% endfor %}			
 
-				<br><br>
-				<input type="button" name="btn" id="generate" value="Generate" />
+
+
+		{% for bill in state_bills %}
+				<div class="single_bill_holder">
+					<h3>{{bill.bill_id}}: {{bill.title}}</h3><button>Remove</button>
+				</div>
+
+			<script>
+				$( document ).ready(function() {
+				$('button').click(function(){
+				 $(this).parent().hide();
+				  });
+				});
+			</script>
+<!--
+			<script> 
+				$( document ).ready(function() {
+				$.ajax({
+				      url: "https://openstates.org/api/v1//bills/?state=oh&bill_id=sb%205&apikey=c105eafac75e4f61b208de79bec4803f",
+				      dataType: 'jsonp',
+				      success: function(state_results){
+				      	var bill_id = state_results[0].bill_id;
+				      	var bill_title = results[0].title;
+				      	var full_text = bill_id+": "+bill_title
+				          $('.single_bill_holder h3').text("Hello");
+				      }
+				  });
+				});
+
+
+				     
+				</script>
+-->
+		{% endfor %}
 
 			</div>
+
 	 	</div>
 		
-				<!-- {% for bill in state_bills %}
-				<div class="single_bill_holder">
-				<h3>{{bill.title}} 
-				<button>Remove</button></h3>
-				</div>
-				{% endfor %} -->
 		<!-- widgetlist container -->
 
 

@@ -9,7 +9,6 @@ from django.http import HttpResponseRedirect, HttpResponse
 #Create a preview function that will render the iframe into the landing page(index)
 def preview(request, sunlightAPIs, bill_id, state):
 	form = SearchBillForm(request.POST)
-
 	if request.method == 'GET':
 		if sunlightAPIs == "1":
 			json_response = get_opencongress_api(bill_id)
@@ -21,9 +20,7 @@ def preview(request, sunlightAPIs, bill_id, state):
 		else:
 			json_response = get_openstates_api(bill_id, state)
 			congress_bills=[]
-			state_bills = []
-			state_bills.append(json_response)
-			state_bills = state_bills[0]
+			state_bills=json_response
 	return render(request, 'open_states/just_preview.html',{'state_bills': state_bills, 'form':form, 'congress_bills':congress_bills, 'json_response': json_response})
 
 def index(request):
@@ -89,9 +86,7 @@ def get_widget_list(request, sunlightAPIs, bill_id, state):
 		if sunlightAPIs == "1":
 			json_response = get_opencongress_api(bill_id)
 			congress_bills.append(json_response['results'])
-			congress_bills = congress_bills[0]
-			request.session['congress_bills'] = congress_bills
 		else:
 			json_response = get_openstates_api(bill_id, state)
-			state_bills.append(json_response)
+			state_bills = json_response
 		return render(request, 'open_states/widget_list.html',{'state_bills': state_bills, 'form':form, 'congress_bills':congress_bills, 'iframe_url':iframe_url})
