@@ -21,9 +21,10 @@ def preview(request, sunlightAPIs, bill_id, state):
 		else:
 			json_response = get_openstates_api(bill_id, state)
 			congress_bills=[]
-			state_bills=[]
+			state_bills = []
 			state_bills.append(json_response)
-	return render(request, 'open_states/just_preview.html',{'state_bills': state_bills, 'form':form, 'congress_bills':congress_bills})
+			state_bills = state_bills[0]
+	return render(request, 'open_states/just_preview.html',{'state_bills': state_bills, 'form':form, 'congress_bills':congress_bills, 'json_response': json_response})
 
 def index(request):
 	#Create a variable form for the SearchBillForm function in forms.py 
