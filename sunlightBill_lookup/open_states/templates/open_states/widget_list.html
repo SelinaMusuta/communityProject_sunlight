@@ -18,7 +18,7 @@
 
 		<div class="container">
 
-			<div class="lookup_container">
+		<div class="lookup_container">
 
 				<div id="billLookup_container">
 
@@ -38,67 +38,69 @@
 			<div id="widgetList_container">
 
 				<h3>Widget List</h3>
-		
-				{% for bill in congress_bills %}
-				<div class="single_bill_holder">
-				<h3>{{bill.short_title}} <button>Remove</button></h3>
-				</div>
-				{% endfor %}
+
+
+
 				{% for bill in state_bills %}
+				<div id={{bill.bill_id}}>
+					<div class="single_bill_holder">
+					<h3></h3><button>Remove</button>
+				</div>
+				
+
+				<script> $.ajax({
+				      url: "http://openstates.org/api/v1//bills/?state=oh&bill_id=sb%205&apikey=c105eafac75e4f61b208de79bec4803f",
+				      dataType: 'jsonp',
+				      success: function(results){
+				          var bill_title = results[0].title;
+				          var bill_id = results[0].bill_id;
+				          $('.single_bill_holder h3').text(bill_title);
+				          $('#state_bills').append("<div id='three'></div>");
+				          $('#three').text(bill_title);
+
+				      }
+				  });
+				      $('button').click(function(){
+				          	$('h3').append("<button>Hi</button>");
+
+				      	});
+				</script>
+				{% endfor %}
+
+				<br><br>
+				<input type="button" name="btn" id="generate" value="Generate" />
+
+			</div>
+ </div>
+		
+				<!-- {% for bill in state_bills %}
 				<div class="single_bill_holder">
 				<h3>{{bill.title}} 
 				<button>Remove</button></h3>
 				</div>
-				{% endfor %}
-
-				<br>
-				<input type="button" name="btn" id="generate" value="Generate" />
+				{% endfor %} -->
 		<!-- widgetlist container -->
-			</div>
-			</div>
-
-		<div class="lookup_container">
-			<div id="widgetPreview_container"><h2>Preview</h2>
-				<div id="widgetPreview">
-				{% for bill in congress_bills %}
-				<div class="one_result_holder">
-				<p><b>{{bill.bill_id}} ({{bill.congress}}th congress):
-				</b>{{bill.short_title}}</p>
-				<br><b>Sponsor</b>: {{bill.title}}{{bill.sponsor.first_name}} {{bill.sponsor.last_name}} </br>
-				<br><b>Full title</b>: {{bill.official_title}}
-				</div> </br>
-				{% endfor %}
-
-				{% for bill in state_bills %}
-				<div class="one_result_holder">
-				<p><b>{{bill.state}} {{bill.bill_id}} ({{bill.session}}th session):
-				</b>{{bill.title}}</p>
-				</div> </br>
-				{% endfor %}
-
-			</div>
-			<div id="iframe_container">iframe</div>
-		</div>
-		
-	<!-- container close out div -->
 
 	</div>
+		<div class="lookup_container">
+			<div id="widgetPreview_container">
+				<p>Paste this tag into your web page to insert the frame you see above:</p>
+				<div id="iframe_container_url"> < iframe src="{{iframe_url}}" width='300px' height='600' > </div>
+				<div id="widgetPreview">
+				<iframe src={{iframe_url}} width='400px' height='500px'>
+				</div>
+				
+	
+			</div>
+		
+		</div>
+
+
+<div id="footer"><h4> This website is open source. Visit the code: </h4></div>
 
 </div>
-
-	<div id="footer"><h4> This website is open source. Visit the code: </h4></div>
-
-<script type="text/javascript" src="{% static 'open_states/script.js' %}"></script>
-
-	<script>
-	$('.one_result_holder').hide();
-
-	$('button').click(function(){
-		$(this).parent().hide();
-		$('.one_result_holder').show();
-	});
-	</script>
-
 </body>
+
+<script type="text/javascript" src="{% static javascript.js %}"></script>
 
 </html>
