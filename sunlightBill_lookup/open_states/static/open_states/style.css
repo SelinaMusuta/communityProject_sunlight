@@ -17,6 +17,10 @@ h3						{
 p                      {font-family: "Helvetica", regular;
 						font-size: 16pt;
 						margin-left: 20px;}
+
+a:link 					{color: white;
+						 text-decoration: none;
+							}
 					
 
 
@@ -40,9 +44,9 @@ input[type=text]		{
     					/*box-shadow: 2px 2px 0 #828181 inset;}*/
 
 input[type=submit]		{height: 30px;
-						 width:  200px;
+						 width:  210px;
 						 margin-top: 5px;
-						 margin-left: 100px;
+						 margin-left: 120px;
 						 border-radius: 5px;
 						 font-family: "Georgia", regular;
 						 font-size: 16pt;
@@ -156,13 +160,44 @@ button 					{height: 30px;
 							
 							}
 
-#widgetPreview				{display: inline-block;
+#justPreview_container	{display: inline-block;
+							background-color: #EEEEEE;
+							position: absolute;
+							width: 450px;
+				   			height: 450px;
+							margin-top: 50px;
+							margin-left: 10px;
+							font-family: "Ubuntu Condensed", regular;
+							font-size: 11pt;
+							border: solid 3px white;
+							
+							
+							}
+
+
+#widgetPreview				{
+							display: inline-block;
 							background-color: #F9F8F8;
 							position: absolute;
 							width: 400px;
 				   			height: 350px;
 							margin-top: 50px;
 							margin-left: 60px;
+							border: solid 1px black;
+							font-family: "Georgia", regular;
+							font-size: 12pt;
+							overflow-y: scroll;
+							overflow-x: hidden;
+							}
+
+#justPreview				{
+							display: inline-block;
+							background-color: #F9F8F8;
+							position: absolute;
+							width: 400px;
+				   			height: 350px;
+							margin-top: 50px;
+							margin-left: 20px;
 							border: solid 1px black;
 							font-family: "Georgia", regular;
 							font-size: 12pt;

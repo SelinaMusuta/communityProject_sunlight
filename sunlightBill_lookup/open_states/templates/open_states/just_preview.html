@@ -13,9 +13,9 @@
 
 <body>
 
-		<div class="lookup_container">
-			<div id="widgetPreview_container">
-				<div id="widgetPreview">
+		
+			<div id="justPreview_container">
+				<div id="justPreview">
 				
 				{% for bill in congress_bills %}
 				<div id={{bill.bill_id}}>
@@ -35,17 +35,15 @@
 				</div> </br>
 				{% endfor %}
 
-			</div>
-			Paste this tag into your web page to insert the frame you see above:
+				</div>
 
-			<div id="iframe_container">iframe src="http://127.0.0.1:8000/open_states/get_widget_list/1/hr5-113/none/" width='300px' height='600'></div>
-		</div>
+		
 		
 	<!-- container close out div -->
 
-	</div>
+			</div>
 
-</div>
+
 
 
 </body>
