@@ -1,5 +1,7 @@
 ![alt tag](http://assets.sunlightfoundation.com/logos/2013/SunlightFoundation-logo.png)
 
+Update (11/13/2017):  The Sunlight API is defunct
+
 Bill Look-Up Iframe
 ===========
 
